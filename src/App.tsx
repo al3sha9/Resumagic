@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-  FileText,
   Download,
   ChevronLeft,
   ChevronRight,
@@ -94,10 +93,9 @@ function App() {
         <div className="z-10 ">
           <header className="bg-white/70 backdrop-blur-md z-30 shadow-sm border-b border-gray-200">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="flex justify-between items-center h-16">
-                <div className="flex items-center">
-                  <FileText className="w-8 h-8 text-blue-600 mr-3" />
-                  <h1 className="text-2xl font-bold text-gray-900">Resumagic</h1>
+              <div className="flex justify-between py-3 items-center md:h-16">
+                <div className="">
+                  <h1 className="text-2xl font-bold text-gray-900 hidden md:block">Resumagic <span className="font-light text-sm ">by typs.dev</span></h1>
                 </div>
                 <div className="flex items-center gap-4">
                   <button
@@ -145,19 +143,21 @@ function App() {
                         }}
                       ></div>
                     </div>
-                    <div className="flex justify-between mt-2">
-                      {steps.map((step, index) => (
-                        <button
-                          key={step.id}
-                          onClick={() => setCurrentStep(index)}
-                          className={`text-xs px-2 py-1 rounded ${index <= currentStep
-                            ? "bg-blue-100 text-blue-800"
-                            : "text-gray-500"
-                            }`}
-                        >
-                          {step.title}
-                        </button>
-                      ))}
+                    <div className="mt-2 overflow-x-auto">
+                      <div className="flex gap-2 w-max">
+                        {steps.map((step, index) => (
+                          <button
+                            key={step.id}
+                            onClick={() => setCurrentStep(index)}
+                            className={`text-xs whitespace-nowrap px-3 py-1 rounded ${index <= currentStep
+                              ? "bg-blue-100 text-blue-800"
+                              : "text-gray-500 hover:text-gray-700"
+                              }`}
+                          >
+                            {step.title}
+                          </button>
+                        ))}
+                      </div>
                     </div>
                   </div>
 
@@ -210,7 +210,7 @@ function App() {
                       <X className="w-6 h-6" />
                     </button>
                   </div>
-                  <div className="border border-gray-200 rounded-lg overflow-hidden">
+                  <div className="border border-gray-200 rounded-lg overflow-x-auto">
                     <ResumePreview data={resumeData} />
                   </div>
                 </div>

@@ -24,7 +24,7 @@ export const ProjectsForm: React.FC<ProjectsFormProps> = ({ data, onChange }) =>
   };
 
   const updateProject = (id: string, field: keyof Project, value: string) => {
-    onChange(data.map(project => 
+    onChange(data.map(project =>
       project.id === id ? { ...project, [field]: value } : project
     ));
   };
@@ -97,7 +97,7 @@ export const ProjectsForm: React.FC<ProjectsFormProps> = ({ data, onChange }) =>
                 value={project.link || ''}
                 onChange={(e) => updateProject(project.id, 'link', e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="https://github.com/johndoe/project"
+                placeholder="https://github.com/al3sha9"
               />
             </div>
 

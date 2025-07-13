@@ -7,14 +7,14 @@ interface ResumePreviewProps {
 
 export const ResumePreview: React.FC<ResumePreviewProps> = ({ data }) => {
   return (
-    <div id="resume-preview" className="bg-white shadow-lg max-w-4xl mx-auto" style={{ minHeight: '11in', width: '8.5in' }}>
+    <div id="resume-preview" className="bg-white  shadow-xl my-2 border max-w-4xl mx-auto" style={{ minHeight: '11in', width: '8.5in' }}>
       <div className="p-8 print:p-6">
         {/* Header */}
         <div className="text-center border-b-2 border-gray-900 pb-4 mb-6">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
             {data.personalInfo.name || 'Your Name'}
           </h1>
-          <div className="text-sm text-gray-700 space-y-1">
+          <div className="text-sm text-gray-700 space-y-2">
             <div className="flex flex-wrap justify-center gap-4">
               {data.personalInfo.email && (
                 <span>{data.personalInfo.email}</span>
@@ -40,7 +40,7 @@ export const ResumePreview: React.FC<ResumePreviewProps> = ({ data }) => {
         {/* Summary */}
         {data.summary && (
           <div className="mb-6">
-            <h2 className="text-lg font-bold text-gray-900 mb-2 border-b border-gray-400">
+            <h2 className="text-lg font-bold text-gray-900 mb-2 pb-2 border-b border-gray-400">
               PROFESSIONAL SUMMARY
             </h2>
             <p className="text-sm text-gray-800 leading-relaxed">
@@ -52,7 +52,7 @@ export const ResumePreview: React.FC<ResumePreviewProps> = ({ data }) => {
         {/* Education */}
         {data.education.length > 0 && (
           <div className="mb-6">
-            <h2 className="text-lg font-bold text-gray-900 mb-2 border-b border-gray-400">
+            <h2 className="text-lg font-bold text-gray-900 mb-2 pb-2 border-b border-gray-400">
               EDUCATION
             </h2>
             {data.education.map((edu) => (
@@ -84,7 +84,7 @@ export const ResumePreview: React.FC<ResumePreviewProps> = ({ data }) => {
         {/* Experience */}
         {data.experience.length > 0 && (
           <div className="mb-6">
-            <h2 className="text-lg font-bold text-gray-900 mb-2 border-b border-gray-400">
+            <h2 className="text-lg font-bold text-gray-900 mb-2 pb-2 border-b border-gray-400">
               EXPERIENCE
             </h2>
             {data.experience.map((exp) => (
@@ -118,7 +118,7 @@ export const ResumePreview: React.FC<ResumePreviewProps> = ({ data }) => {
         {/* Projects */}
         {data.projects.length > 0 && (
           <div className="mb-6">
-            <h2 className="text-lg font-bold text-gray-900 mb-2 border-b border-gray-400">
+            <h2 className="text-lg font-bold text-gray-900 mb-2 pb-2 border-b border-gray-400">
               PROJECTS
             </h2>
             {data.projects.map((project) => (
@@ -149,7 +149,7 @@ export const ResumePreview: React.FC<ResumePreviewProps> = ({ data }) => {
         {/* Skills */}
         {data.skills.length > 0 && (
           <div className="mb-6">
-            <h2 className="text-lg font-bold text-gray-900 mb-2 border-b border-gray-400">
+            <h2 className="text-lg font-bold text-gray-900 mb-2 pb-2 border-b border-gray-400">
               SKILLS
             </h2>
             <div className="text-sm text-gray-800">

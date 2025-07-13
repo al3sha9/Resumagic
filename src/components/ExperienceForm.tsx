@@ -27,7 +27,7 @@ export const ExperienceForm: React.FC<ExperienceFormProps> = ({ data, onChange }
   };
 
   const updateExperience = (id: string, field: keyof Experience, value: any) => {
-    onChange(data.map(exp => 
+    onChange(data.map(exp =>
       exp.id === id ? { ...exp, [field]: value } : exp
     ));
   };
@@ -97,7 +97,7 @@ export const ExperienceForm: React.FC<ExperienceFormProps> = ({ data, onChange }
                 value={experience.company}
                 onChange={(e) => updateExperience(experience.id, 'company', e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Google"
+                placeholder="Apple"
                 required
               />
             </div>

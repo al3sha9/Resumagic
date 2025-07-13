@@ -26,7 +26,7 @@ export const EducationForm: React.FC<EducationFormProps> = ({ data, onChange }) 
   };
 
   const updateEducation = (id: string, field: keyof Education, value: string) => {
-    onChange(data.map(edu => 
+    onChange(data.map(edu =>
       edu.id === id ? { ...edu, [field]: value } : edu
     ));
   };
@@ -72,7 +72,7 @@ export const EducationForm: React.FC<EducationFormProps> = ({ data, onChange }) 
                 value={education.institution}
                 onChange={(e) => updateEducation(education.id, 'institution', e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Harvard University"
+                placeholder="SZABIST University"
                 required
               />
             </div>
@@ -141,7 +141,7 @@ export const EducationForm: React.FC<EducationFormProps> = ({ data, onChange }) 
                 value={education.honors || ''}
                 onChange={(e) => updateEducation(education.id, 'honors', e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Magna Cum Laude, Dean's List"
+                placeholder="Certififactes of Excellence"
               />
             </div>
           </div>

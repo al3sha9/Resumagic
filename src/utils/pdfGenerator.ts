@@ -8,15 +8,15 @@ export const generatePDF = (resumeData: any) => {
     margin: 0.5,
     filename: `${resumeData.personalInfo.name || 'resume'}_harvard_cv.pdf`,
     image: { type: 'jpeg', quality: 0.98 },
-    html2canvas: { 
+    html2canvas: {
       scale: 2,
       useCORS: true,
       letterRendering: true
     },
-    jsPDF: { 
-      unit: 'in', 
-      format: 'letter', 
-      orientation: 'portrait' 
+    jsPDF: {
+      unit: 'in',
+      format: 'letter',
+      orientation: 'portrait'
     }
   };
 
