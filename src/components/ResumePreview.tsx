@@ -7,7 +7,7 @@ interface ResumePreviewProps {
 
 export const ResumePreview: React.FC<ResumePreviewProps> = ({ data }) => {
   return (
-    <div id="resume-preview" className="bg-white  shadow-xl my-2 border max-w-4xl mx-auto" style={{ minHeight: '11in', width: '8.5in' }}>
+    <div id="resume-preview" className="bg-white  overflow-x-auto my-2 max-w-4xl mx-auto" >
       <div className="p-8 print:p-6">
         {/* Header */}
         <div className="text-center border-b-2 border-gray-900 pb-4 mb-6">
@@ -39,7 +39,7 @@ export const ResumePreview: React.FC<ResumePreviewProps> = ({ data }) => {
 
         {/* Summary */}
         {data.summary && (
-          <div className="mb-6">
+          <div className="mb-6 text-wrap">
             <h2 className="text-lg font-bold text-gray-900 mb-2 pb-2 border-b border-gray-400">
               PROFESSIONAL SUMMARY
             </h2>

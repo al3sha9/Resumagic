@@ -6,7 +6,7 @@ export const generatePDF = (resumeData: any) => {
 
   const opt = {
     margin: 0.5,
-    filename: `${resumeData.personalInfo.name || 'resume'}_harvard_cv.pdf`,
+    filename: `${resumeData.personalInfo.name || 'resume'}_resumagic.pdf`,
     image: { type: 'jpeg', quality: 0.98 },
     html2canvas: {
       scale: 2,
